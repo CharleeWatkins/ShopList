@@ -1,0 +1,116 @@
+Pseudocode Of ShopList
+
+Login & SignUp
+BEGIN Authentication
+  DISPLAY Auth_Page
+  
+  IF user selects "Sign up" THEN
+    GET username, email, password
+    IF fields are valid AND email not in database THEN
+      CREATE new_user_record
+      SAVE to database
+      REDIRECT to Home_Dashboard
+    ELSE
+      DISPLAY error_message
+    END IF
+
+  ELSE IF user selects "Sign in" THEN
+    GET username, password
+    IF credentials match database THEN
+      CREATE user_session
+      REDIRECT to Home_Dashboard
+    ELSE
+      DISPLAY error_message
+    END IF
+  END IF
+END Authentication
+
+Home
+BEGIN Dashboard
+  LOAD user_session
+  FETCH user_stats (total_lists, items_to_pick_up, shared_lists, completed)
+  FETCH active_lists (where items_checked < total_items)
+  
+  DISPLAY "Good morning, [Username]"
+  DISPLAY user_stats_cards
+  DISPLAY active_lists in "Pick up where you left off"
+  
+  IF user clicks sidebar_nav THEN
+    LOAD respective_page (My Lists, Create List, Share List, Profile)
+  END IF
+END Dashboard
+
+
+List
+BEGIN My_Lists
+  FETCH all_lists WHERE owner = current_user
+  DISPLAY list_cards (Name, progress_bar, category, last_updated)
+  
+  IF user clicks "Create new list" THEN
+    REDIRECT to Create_List_Page
+  END IF
+END My_Lists
+
+BEGIN Create_List_Page
+  GET list_name, category, shopping_date, notes
+  INITIALIZE empty_item_array
+  
+  WHILE user is on page:
+    IF user adds item THEN
+      GET item_name, quantity, est_price
+      APPEND item to empty_item_array
+      UPDATE estimated_total
+    END IF
+  END WHILE
+  
+  IF user clicks "Create list" THEN
+    VALIDATE required_fields (Name)
+    IF valid THEN
+      SAVE list_details AND item_array to database
+      REDIRECT to My_Lists
+    END IF
+  END IF
+END Create_List_Page
+
+
+Share
+BEGIN Share_List
+  GET selected_list
+  FETCH current_permissions and collaborators
+  
+  IF user enters email AND clicks "Send invite" THEN
+    VALIDATE email_address
+    IF valid THEN
+      GENERATE invite_link
+      SEND email_notification to invitee
+      ADD invitee to "People with access" list
+    END IF
+  END IF
+  
+  IF user toggles "Sharing settings" (e.g., Editors can invite others) THEN
+    UPDATE list_permissions in database
+  END IF
+END Share_List
+
+
+Profile
+BEGIN Profile_Page
+  FETCH user_data (Name, Email, Location, Preferences, Security_settings)
+  DISPLAY profile_form filled with user_data
+  
+  IF user modifies fields THEN
+    ENABLE "Save changes" button
+  END IF
+  
+  IF user clicks "Save changes" THEN
+    VALIDATE updated_fields
+    IF valid THEN
+      UPDATE database with new_user_data
+      DISPLAY "Changes saved" confirmation
+    END IF
+  END IF
+  
+  IF user clicks "Change password" THEN
+    RUN password_update_routine
+  END IF
+END Profile_Page

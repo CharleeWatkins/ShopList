@@ -1,0 +1,55 @@
+Algorithm Of ShopList 
+
+Step 1: Login and Sign UP
+
+User lands on the Create Account page.
+
+User enters Username, Email, and Password, then clicks Sign up.
+
+Alternatively, user clicks Sign in, enters credentials on the Welcome Back page, and clicks Login.
+
+System authenticates and redirects the user to the Home Dashboard.
+
+
+Step 2: Dashboard 
+
+System displays the Home Dashboard with a greeting, user stats (total lists, items to pick up), and a "Pick up where you left off" section.
+
+User views the left-hand navigation sidebar (Home, My Lists, Create List, Share List, Profile).
+
+User clicks My Lists in the sidebar.
+
+
+Step 3: List 
+System displays the My Lists page showing all user lists in card format.
+
+User clicks the Create new list button.
+
+On the Create a new list page, user fills in "The essentials" (Name, Notes, Category, Shopping date).
+
+User adds items in the "Items" section (Name, Quantity, Est. Price).
+
+User optionally sets a budget in "Make it yours".
+
+User clicks Create list to save.
+
+
+Step 4: Sharing
+
+User selects a list (e.g., "Weekly groceries") and clicks Share List in the sidebar.
+
+On the Sharing page, user enters a name or email in the "Invite people" field.
+
+User sets permissions (Can edit/Can view) and clicks Send invite.
+
+System updates the "People with access" list and shares the link.
+
+
+Step 5: Profile
+
+User clicks Profile in the sidebar.
+
+System displays the Your profile page with Personal info, Security, and Notifications.
+
+User updates details (e.g., Location, Currency) and clicks Save changes to update the database.
+
