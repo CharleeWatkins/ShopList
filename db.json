@@ -1,0 +1,90 @@
+{
+  "users": [
+    {
+      "id": "AfHcMGIvqTs",
+      "name": "Charlee ",
+      "surname": "Watkins",
+      "cellNumber": "01111111111",
+      "email": "char@gmail.com",
+      "passwordHash": "$2b$10$Wu8geZQ7DTIiBQG7M8V.A.qI7anczUKd8T1ImrNTMyEHBEOtHotCm"
+    }
+  ],
+  "lists": [
+    {
+      "id": "1",
+      "userId": "1",
+      "name": "Weekly groceries",
+      "category": "Groceries",
+      "notes": "Pick up bread and milk",
+      "dateAdded": "2023-10-25T10:00:00.000Z",
+      "sharedWith": [],
+      "items": [
+        {
+          "id": "i1",
+          "name": "Avocados",
+          "quantity": "2 pcs",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "userId": "AfHcMGIvqTs",
+      "name": "Charlee ",
+      "category": "Groceries",
+      "notes": "fnfkk nffj",
+      "dateAdded": "2026-10-25T10:20:31.742Z",
+      "sharedWith": [],
+      "items": [
+        {
+          "id": "1c70dbce-4e33-4b53-963f-2a116cd8978a",
+          "name": "Bread ",
+          "quantity": "1",
+          "completed": false
+        },
+        {
+          "id": "788cc452-0f69-4938-9a41-4dc516460168",
+          "name": "Milk",
+          "quantity": "1",
+          "completed": false
+        },
+        {
+          "id": "59193f27-5e55-4216-ad5f-0c6476341f1a",
+          "name": "Eggs",
+          "quantity": "1",
+          "completed": false
+        }
+      ],
+      "id": "8nwLmHMztng"
+    },
+    {
+      "userId": "AfHcMGIvqTs",
+      "name": "Weekend brunch",
+      "category": "Household",
+      "notes": "hvufugb fbiosfbb",
+      "dateAdded": "2026-10-27T00:00:00.000Z",
+      "sharedWith": [],
+      "items": [
+        {
+          "id": "a7cfd025-3efa-4763-8fd2-6b46a728156e",
+          "name": "Soap",
+          "quantity": "1",
+          "completed": true
+        },
+        {
+          "id": "34e5bf5a-05f4-49f0-b0cc-4f573fa7c43d",
+          "name": "Toothpaste",
+          "quantity": "2",
+          "completed": true
+        },
+        {
+          "id": "aff7dc5d-67f8-4bf1-988b-e0bc2e1354e3",
+          "name": "Lotion",
+          "quantity": "1",
+          "completed": true
+        }
+      ],
+      "id": "0xoYMXymSWA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
